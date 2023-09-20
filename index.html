@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Netflix Quimica</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="/js/app.js"></script>
+
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="nav">
+      <div class="nav_container">
+        <img class="logo" src="resources/images/logo.svg" alt="">
+          <div class="menu">
+            <ls class="inicio" href="#">Inicio</ls>
+            <ls href="#" class="pages" >Filmes</ls>
+            <ls href="#" class="pages" >Series</ls>
+            <ls href="#" class="list" onclick="window.location.href = 'https://quimica-plasticos-netflix.vercel.app/mylist.html';">A minha lista</ls>
+          </div>
+          <div class="container_avatar">
+            <img class="avatar" src="resources/images/avatar.png" alt=""> 
+            <span class="profile_settings">▾</span>
+          </div>
+      </div> 
+    </div>
+    <!--banner-->
+    <div class="banner">
+      <div class="banner__contents">
+        <video src="/resources/videos/banner.mp4"  autoplay loop muted class="banner__video"></video>
+        <h1 class="banner__title">Plásticos e Novos Materiais</h1>
+        <div class="banner__description">
+          Os plásticos têm vindo a dominar o nosso mundo. O que muitos não sabem é que os novos materiais estão a formar o inicio de um novo império. 
+        </div>
+        <div class="banner__buttons">
+            <button class="button_ver" onclick="window.location.href = 'https://quimica-plasticos-netflix.vercel.app/movies.html';">► Ver</button>
+            <button class="button_i">ⓘ Mais informações</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- row -->
+    <div id="headrow">
+      <div class="headrows"></div>
+        <div class="row">
+          <h2 class="row__title"></h2>
+          <div class="row__posters"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("scroll",function(){
+
+        var nav = document.querySelector(".nav");
+        nav.classList.toggle("active", window.scrollY > 0);
+      }) 
+    </script>
+  </body>
+</html>
